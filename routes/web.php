@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix' => 'github'], function() {
-    Route::post('/bibek/portfolio', function () {
+Route::group(['prefix' => 'github/'], function() {
+    Route::post('bibek/portfolio', function () {
         try {
             $secret = "monkey@21";
             $payload = file_get_contents("php://input");
